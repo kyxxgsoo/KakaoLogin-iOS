@@ -30,6 +30,7 @@
 		F3710539291FB62900EDA8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F371053C291FB62900EDA8C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F37F22FD2921544800C09BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F37F22FE292155B300C09BEC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 				F3710537291FB62800EDA8C8 /* ContentView.swift */,
 				F3710539291FB62900EDA8C8 /* Assets.xcassets */,
 				F371053B291FB62900EDA8C8 /* Preview Content */,
+				F37F22FE292155B300C09BEC /* Config.xcconfig */,
 			);
 			path = KakaoLoginTutorial;
 			sourceTree = "<group>";
