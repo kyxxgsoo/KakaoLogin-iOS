@@ -21,6 +21,8 @@
 		F37F22F829201E4E00C09BEC /* KakaoSDKTalk in Frameworks */ = {isa = PBXBuildFile; productRef = F37F22F729201E4E00C09BEC /* KakaoSDKTalk */; };
 		F37F22FA29201E4E00C09BEC /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = F37F22F929201E4E00C09BEC /* KakaoSDKTemplate */; };
 		F37F22FC29201E4E00C09BEC /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = F37F22FB29201E4E00C09BEC /* KakaoSDKUser */; };
+		F37F230329222CDC00C09BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F230229222CDC00C09BEC /* AppDelegate.swift */; };
+		F3B4E58329223872002DC033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B4E58229223872002DC033 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		F371053C291FB62900EDA8C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F37F22FD2921544800C09BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F37F22FE292155B300C09BEC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F37F230229222CDC00C09BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3B4E58229223872002DC033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				F3710539291FB62900EDA8C8 /* Assets.xcassets */,
 				F371053B291FB62900EDA8C8 /* Preview Content */,
 				F37F22FE292155B300C09BEC /* Config.xcconfig */,
+				F37F230229222CDC00C09BEC /* AppDelegate.swift */,
+				F3B4E58229223872002DC033 /* SceneDelegate.swift */,
 			);
 			path = KakaoLoginTutorial;
 			sourceTree = "<group>";
@@ -176,8 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37F230329222CDC00C09BEC /* AppDelegate.swift in Sources */,
 				F3710538291FB62800EDA8C8 /* ContentView.swift in Sources */,
 				F3710536291FB62800EDA8C8 /* KakaoLoginTutorialApp.swift in Sources */,
+				F3B4E58329223872002DC033 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +194,7 @@
 /* Begin XCBuildConfiguration section */
 		F371053E291FB62900EDA8C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37F22FE292155B300C09BEC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -246,6 +255,7 @@
 		};
 		F371053F291FB62900EDA8C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37F22FE292155B300C09BEC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -300,6 +310,7 @@
 		};
 		F3710541291FB62900EDA8C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37F22FE292155B300C09BEC /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +341,7 @@
 		};
 		F3710542291FB62900EDA8C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37F22FE292155B300C09BEC /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
