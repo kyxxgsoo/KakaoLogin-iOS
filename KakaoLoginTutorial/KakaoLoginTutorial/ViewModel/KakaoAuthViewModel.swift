@@ -12,6 +12,17 @@ import KakaoSDKUser
 
 class KakaoAuthViewModel : ObservableObject {
     
+    func handleKakaoLogout() {
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("logout() success.")
+            }
+        }
+    }
+    
     func handleKakaoLogin() {
         // 카카오톡 설치 여부 확인 - 사용자의 핸드폰에 카카오 앱이 설치가 되어있는지?(카카오톡 설치여부)
         if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -31,16 +42,16 @@ class KakaoAuthViewModel : ObservableObject {
         } else {    // 설치가 안되어있을 때
             // 카카오 웹 뷰로 로그인 - loginWithKakaoAccount()
             UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                    if let error = error {
-                        print(error)
-                    }
-                    else {
-                        print("loginWithKakaoAccount() success.")
-
-                        //do something
-                        _ = oauthToken
-                    }
+                if let error = error {
+                    print(error)
                 }
+                else {
+                    print("loginWithKakaoAccount() success.")
+                    
+                    //do something
+                    _ = oauthToken
+                }
+            }
         }
     }
 }
