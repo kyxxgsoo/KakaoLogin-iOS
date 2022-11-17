@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F327334E292620290096D283 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327334D292620290096D283 /* TestView.swift */; };
 		F3710536291FB62800EDA8C8 /* KakaoLoginTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3710535291FB62800EDA8C8 /* KakaoLoginTutorialApp.swift */; };
 		F3710538291FB62800EDA8C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3710537291FB62800EDA8C8 /* ContentView.swift */; };
 		F371053A291FB62900EDA8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3710539291FB62900EDA8C8 /* Assets.xcassets */; };
@@ -24,9 +25,11 @@
 		F37F230329222CDC00C09BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F230229222CDC00C09BEC /* AppDelegate.swift */; };
 		F3B4E58329223872002DC033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B4E58229223872002DC033 /* SceneDelegate.swift */; };
 		F3B4E58629224F3E002DC033 /* KakaoAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B4E58529224F3E002DC033 /* KakaoAuthViewModel.swift */; };
+		F3F356152926BCF8003FBA26 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F356142926BCF8003FBA26 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F327334D292620290096D283 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		F3710532291FB62800EDA8C8 /* KakaoLoginTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoLoginTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3710535291FB62800EDA8C8 /* KakaoLoginTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginTutorialApp.swift; sourceTree = "<group>"; };
 		F3710537291FB62800EDA8C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		F37F230229222CDC00C09BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B4E58229223872002DC033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3B4E58529224F3E002DC033 /* KakaoAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthViewModel.swift; sourceTree = "<group>"; };
+		F3F356142926BCF8003FBA26 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F327334C29261EFB0096D283 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3710537291FB62800EDA8C8 /* ContentView.swift */,
+				F327334D292620290096D283 /* TestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F3710529291FB62800EDA8C8 = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +92,11 @@
 		F3710534291FB62800EDA8C8 /* KakaoLoginTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F3F356112926B888003FBA26 /* Model */,
+				F327334C29261EFB0096D283 /* View */,
 				F3B4E58429224F27002DC033 /* ViewModel */,
 				F37F22FD2921544800C09BEC /* Info.plist */,
 				F3710535291FB62800EDA8C8 /* KakaoLoginTutorialApp.swift */,
-				F3710537291FB62800EDA8C8 /* ContentView.swift */,
 				F3710539291FB62900EDA8C8 /* Assets.xcassets */,
 				F371053B291FB62900EDA8C8 /* Preview Content */,
 				F37F22FE292155B300C09BEC /* Config.xcconfig */,
@@ -106,6 +120,14 @@
 				F3B4E58529224F3E002DC033 /* KakaoAuthViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3F356112926B888003FBA26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3F356142926BCF8003FBA26 /* Profile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F327334E292620290096D283 /* TestView.swift in Sources */,
 				F3B4E58629224F3E002DC033 /* KakaoAuthViewModel.swift in Sources */,
 				F37F230329222CDC00C09BEC /* AppDelegate.swift in Sources */,
+				F3F356152926BCF8003FBA26 /* Profile.swift in Sources */,
 				F3710538291FB62800EDA8C8 /* ContentView.swift in Sources */,
 				F3710536291FB62800EDA8C8 /* KakaoLoginTutorialApp.swift in Sources */,
 				F3B4E58329223872002DC033 /* SceneDelegate.swift in Sources */,

@@ -5,12 +5,17 @@
 //  Created by Kyungsoo Lee on 2022/11/14.
 //
 
+import SwiftUI
 import Foundation
 import Combine
 import KakaoSDKAuth
 import KakaoSDKUser
 
 class KakaoAuthViewModel : ObservableObject {
+    
+    var testUser = [""]
+    
+ 
     
     @Published var isLoggedIn : Bool = false
     
@@ -85,11 +90,43 @@ class KakaoAuthViewModel : ObservableObject {
             if (UserApi.isKakaoTalkLoginAvailable()) {
                 // 설치가 되어있으면 카카오 앱을 통해 로그인 - loginWithKakaoTalk()
                 isLoggedIn = await handleLoginWithKakaoTalkApp()
+                
             } else {    // 설치가 안되어있을 때
                 // 카카오 웹 뷰로 로그인 - loginWithKakaoAccount()
                 isLoggedIn = await handleLoginWithKakaoAccount()
                 
             }
+            self.setUserInfo()
         }
     }
+    
+    func setUserInfo() {
+        UserApi.shared.me {(user, error) in
+            if let error = error {
+                print(error)
+            } else {
+                if let user = user {
+                    var scopes = [String]()
+                    if (user.kakaoAccount?.profileNeedsAgreement == true) { scopes.append("profile") }
+                    if (user.kakaoAccount?.emailNeedsAgreement == true) { scopes.append("account_email") }
+                    if (user.kakaoAccount?.birthdayNeedsAgreement == true) { scopes.append("birthday") }
+                    if (user.kakaoAccount?.birthyearNeedsAgreement == true) { scopes.append("birthyear") }
+                    if (user.kakaoAccount?.genderNeedsAgreement == true) { scopes.append("gender") }
+                    if (user.kakaoAccount?.phoneNumberNeedsAgreement == true) { scopes.append("phone_number") }
+                    if (user.kakaoAccount?.ageRangeNeedsAgreement == true) { scopes.append("age_range") }
+                    if (user.kakaoAccount?.ciNeedsAgreement == true) { scopes.append("account_ci") }
+                    
+                    self.testUser = scopes
+                }
+                print("**************")
+                print(user!)
+                print("**************")
+                
+            }
+            
+            
+        }
+        
+    }
 }
+
