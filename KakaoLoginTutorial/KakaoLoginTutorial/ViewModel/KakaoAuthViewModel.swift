@@ -13,7 +13,7 @@ import KakaoSDKUser
 
 class KakaoAuthViewModel : ObservableObject {
     
-    var testUser = [""]
+    var testUser : User?
     
  
     
@@ -115,12 +115,9 @@ class KakaoAuthViewModel : ObservableObject {
                     if (user.kakaoAccount?.phoneNumberNeedsAgreement == true) { scopes.append("phone_number") }
                     if (user.kakaoAccount?.ageRangeNeedsAgreement == true) { scopes.append("age_range") }
                     if (user.kakaoAccount?.ciNeedsAgreement == true) { scopes.append("account_ci") }
-                    
-                    self.testUser = scopes
                 }
-                print("**************")
-                print(user!)
-                print("**************")
+                self.testUser = user
+                print(user?.kakaoAccount?.profile?.nickname ?? "TEST")
                 
             }
             

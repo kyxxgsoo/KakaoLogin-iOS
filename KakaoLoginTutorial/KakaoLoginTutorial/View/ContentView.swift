@@ -25,6 +25,7 @@ struct ContentView: View {
             Button("카카오 로그아웃", action: {
                 kakaoAuthVM.kakaoLogout()
             })
+            Text("\(kakaoAuthVM.testUser?.kakaoAccount?.profile?.nickname ?? "TEST")")
             
             
         }
