@@ -25,7 +25,9 @@ struct ContentView: View {
             Button("카카오 로그아웃", action: {
                 kakaoAuthVM.kakaoLogout()
             })
-            Text("\(kakaoAuthVM.testUser?.kakaoAccount?.profile?.nickname ?? "TEST")")
+
+            Image("\(kakaoAuthVM.testUser?.kakaoAccount?.profile?.thumbnailImageUrl)" ?? "https://k.kakaocdn.net/dn/63PMK/btrKlpA2mj6/TdP3yOIGYh5UGbWklHvcGk/img_640x640.jpg")
+            Text("\(kakaoAuthVM.testUser?.kakaoAccount?.profile?.nickname ?? "nickname")")
             
             
         }
